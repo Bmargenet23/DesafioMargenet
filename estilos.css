@@ -1,0 +1,404 @@
+/* * Estilos grales  */
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto Slab', serif;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    background-image:url("./img/fondo.jpg");
+    background-repeat:no-repeat;
+    background-size:cover;
+    color: aliceblue;
+    }
+
+header {
+   background-image:url("./img/principal.jpg");
+   background-position: top center;
+   background-repeat: no-repeat;
+   background-size: cover;
+  
+}
+
+
+
+/* ! Nombrar las areas */
+header {
+    grid-area: cabeza;
+ }
+ footer {
+    grid-area: pie;
+ }
+ nav {
+    grid-area: menu;     
+ }
+ #section1 {
+    grid-area: enlaces;     
+ }
+ #section2 {
+    grid-area: info;
+ }
+
+ /** RESPONSIVE DESIGN */
+ /** DESKTOP */
+ /* estilos css */
+ @media (min-width: 1024px) {
+
+    /* * GRIDS por AREAS */
+   #grid {
+          display: grid;
+          /* Estructura por areas */
+          grid-template-areas: 
+          /* 4 columnas y 5 filas */
+          "cabeza cabeza cabeza cabeza"   /* fila 1 */
+          "menu menu menu menu"   /* fila 2 */
+          "enlaces enlaces enlaces enlaces"  /* fila 3 */
+          "info info info info"  /* fila 4 */
+          "pie pie pie pie" /* fila 5 */
+          ;
+          grid-template-columns: 1fr 2fr 2fr 1fr;
+          grid-template-rows: 3fr 1fr 3fr 5fr 1fr;
+          grid-column-gap: 0px;
+          grid-row-gap: 0px;
+         }
+
+    h1 {
+         font-size: 5rem;
+         padding-top: 50px;
+         text-align: center;
+         text-shadow: 2px 2px 2px #575757;
+         }
+    .menu-flex {
+          display: flex;
+          flex-flow: row nowrap;
+          justify-content: space-evenly;
+          align-items: stretch;
+          height: 4rem;
+          background-color: #575757;
+       }
+
+    span{ 
+          display: flex;
+          background-color:#575757;
+          border-radius: 10px;
+          text-align: center;
+          justify-content: center;  
+        }
+    span:hover{
+          background-color: grey;
+          position: relative;
+        }       
+    
+    a{
+          text-decoration: none;
+          padding: 10px;
+          margin: 10px;
+          font-size: 1rem;
+          color: aliceblue;
+        }
+
+    ul{
+          display: flex;
+          flex-direction: row;
+          justify-content:space-around;
+          text-decoration: none;
+          list-style: none;
+    }
+
+    .imagenesLink{
+          width: 300px;
+          height: 300px; 
+          margin: 20px;
+          object-fit: cover;
+     }
+
+    h2{
+      padding: 10px 10px;
+      text-align: center;
+      }
+    article{
+      display: flex;
+      flex-direction: row;
+      justify-content:space-evenly;
+      align-items: center;
+      margin: 30px;
+    }
+    p{
+      text-align: justify;
+      width: 40%;
+      margin: 20px;
+
+    }
+    iframe{
+      width: 600px;
+      height: 450px;
+      ;
+    }
+   .enlaces{
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+   }
+   .enlaces2{
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+   }
+   form{
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+   }
+   .enviar{
+      margin: 5px;
+   }
+ }
+
+
+ /** TABLET */
+/* estilos css */
+@media (min-width: 481px) and (max-width: 1024px){
+
+   /* * GRIDS por AREAS */
+   #grid {
+      display: grid;
+      /* Estructura por areas */
+      grid-template-areas: 
+      /* 2 columnas y 5 filas */
+      "cabeza cabeza cabeza"   /* fila 1 */
+      "menu menu menu"   /* fila 2 */
+      "enlaces info info"  /* fila 3 */
+      "enlaces info info"  /* fila 4 */
+      "pie pie pie" /* fila 5 */
+          ;
+      grid-template-columns: 4fr 2fr 2fr;
+      grid-template-rows: 3fr 1fr 3fr 5fr 1fr;
+      grid-column-gap: 0px;
+      grid-row-gap: 0px;
+   }
+
+   h1 {
+      font-size: 3rem;
+      padding-top: 50px;
+      text-align: center;
+      text-shadow: 2px 2px 2px #575757;
+      } 
+
+   span{ 
+      display: flex;
+      background-color:#575757;
+      border-radius: 10px;
+      align-items:center;
+      text-align: center;
+      justify-content: center;
+
+      
+    }
+   span:hover{
+      background-color: grey;
+      position: relative;
+    }
+
+    a{
+      text-decoration: none;
+      padding: 10px;
+      margin: 10px;
+      font-size: 1rem;
+      color: aliceblue;
+    }
+
+   .menu-flex {
+      display: flex  ;
+      flex-flow: row nowrap;
+      justify-content:space-around;
+      align-items:stretch;
+      height: 4rem;
+      background-color: #575757;
+      position: relative;
+    }
+
+   ul{
+      display: flex;
+      flex-direction: column;
+      justify-content:space-around;
+      text-decoration: none;
+      list-style: none;
+      margin: 10px;
+   }
+   .imagenesLink{
+      width: 200px;
+      height: 200px; 
+      margin: 15px;
+      object-fit: cover;
+      border: solid 2px #575757;
+   }
+
+   h2{
+      padding: 10px 10px;
+      text-align: center;
+      }
+
+    article{
+      display: flex;
+      flex-direction: column-reverse;
+      justify-content:space-evenly;
+      align-items: center;
+      margin: 10px;
+    }
+
+    p{
+      text-align: justify;
+      margin: 10px;
+      font-size:small;
+    }
+    iframe{
+      display: flex;
+      align-items: center;
+      width: 600px;
+      height: 450px;
+      ;
+    }
+    .enlaces{
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+   }
+   .enlaces2{
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      margin: 5px;
+      padding: 5px;
+   }
+   form{
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      margin: 2px;
+   }
+   .enviar{
+      margin: 5px;
+   }
+}
+
+
+/** SMARTPHONE  */
+/* estilos css */
+@media (max-width: 480px){
+
+  /* * GRIDS por AREAS */
+  #grid {
+   display: grid;
+   /* Estructura por areas */
+   grid-template-areas: 
+   /* 1 columnas y 5 filas */
+   "menu"   /* fila 1 */
+   "cabeza"     /* fila 2 */
+   "info"  /* fila 3 */
+   "enlaces"   /* fila 4 */
+   "pie"  /* fila 5 */
+   ;
+   grid-template-columns: 1fr;
+   grid-template-rows: 1fr 2fr 5fr 10fr 1fr;
+   /* Espacios */
+   grid-column-gap: 0px;
+   grid-row-gap: 0px;
+   }
+
+   h1 {
+      font-size: 2rem;
+      padding-top: 50px;
+      text-align: center;
+      text-shadow: 2px 2px 2px #575757;
+      }
+
+   span{ 
+      display: flex;
+      background-color:#575757;
+      border-radius: 10px;
+      align-items:center;
+      text-align: center;
+      justify-content: center;
+    
+       }
+   span:hover{
+      background-color: grey;
+      position: relative;
+       }
+   
+   a{
+      text-decoration: none;
+      padding: 0px;
+      margin: 0px;
+      font-size: 1rem;
+      color: aliceblue;
+       }
+   
+   .menu-flex {
+         display: flex  ;
+         flex-direction: column;
+         justify-content: center;
+         align-items:stretch;
+         background-color: #575757;
+         position: relative;
+       }
+   
+   ul{
+         display: flex;
+         flex-direction: column;
+         justify-content:space-around;
+         text-decoration: none;
+         list-style: none;
+         margin: 0px;
+      }
+    
+   .enlaces{
+      margin: 0px;
+      padding: 0px;
+   }   
+   .imagenesLink{
+         width: 100%;
+         padding: 0px; 
+         margin: 0px;
+         border: none;
+      }
+   
+   h2{
+         padding: 10px 10px;
+         text-align: center;
+         }
+   
+   article{
+         display: flex;
+         flex-direction: column;
+         justify-content:space-evenly;
+         align-items: center;
+         margin: 10px;
+       }
+   
+   p{
+         text-align: justify;
+         margin: 10px;
+         font-size:small;
+       }
+    iframe{
+         display: flex;
+         align-items: center;
+         width: 100%;
+         height: 450px;
+         ;
+       }
+   form{
+         display: flex;
+         align-items: center;
+         flex-direction: column;
+         margin: 2px;
+    }
+   .enviar{
+            margin: 5px;
+         }
+} 
